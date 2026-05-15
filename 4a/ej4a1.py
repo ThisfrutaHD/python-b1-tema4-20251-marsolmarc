@@ -43,7 +43,6 @@ def find_intersection(list_1, list_2):
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
-# Si vols provar el teu codi, descomenta les línies següents i executa l'script
 
 # print(find_intersection([1, 2, 3, 4], [3, 4, 5, 6]))
 # print(find_intersection(['apple', 'banana', 'orange'], ['banana', 'kiwi', 'apple']))
