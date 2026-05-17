@@ -20,11 +20,11 @@ Exemple:
 
 
 def descending_list_iterator(numbers_list):
-    # Write here your code
-    pass
+    numbers_list.sort(reverse=True)
+    return iter(numbers_list)
 
 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 
-# numeros = [2, 3, 6, 9, 11, 12, 15, 18]
-# print(list(descending_list_iterator(numeros)))  
+numeros = [2, 3, 6, 9, 11, 12, 15, 18, 67]
+print(list(descending_list_iterator(numeros)))  

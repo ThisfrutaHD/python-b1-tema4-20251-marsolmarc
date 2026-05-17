@@ -30,13 +30,13 @@ Enunciat:
 
 
 def add_elapsed_time(dictionary, key, value):
-    # Write here your code
-    pass
+    dictionary[key] = value
+    return dictionary
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 
-# my_dict = {"Juan": 9.5, "Peter": 14.2, "Sofia": 6.5, "Alex": 8.7}
-# my_dict = add_elapsed_time(my_dict, "Juan", 8.8)
-# my_dict = add_elapsed_time(my_dict, "Alice", 7.3)
-# print(my_dict)
+my_dict = {"Juan": 9.5, "Peter": 14.2, "Sofia": 6.5, "Alex": 8.7}
+my_dict = add_elapsed_time(my_dict, "Juan", 8.8)
+my_dict = add_elapsed_time(my_dict, "Alice", 7.3)
+print(my_dict)

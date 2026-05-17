@@ -23,10 +23,17 @@ Exemple:
 
 
 def count_fruits(fruits_list):
-    # Write here your code
-    pass
+     fruit_count = {}
+
+     for fruit in fruits_list:
+          if fruit in fruit_count:
+               fruit_count[fruit] += 1
+          else:
+               fruit_count[fruit] = 1
+     return fruit_count
+
 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 
-# fruits = ['apple', 'banana', 'orange', 'apple', 'kiwi', 'banana', 'kiwi', 'kiwi', 'kiwi']
-# print(count_fruits(fruits))
+fruits = ['apple', 'banana', 'orange', 'apple', 'kiwi', 'banana', 'kiwi', 'kiwi', 'kiwi']
+print(count_fruits(fruits))
