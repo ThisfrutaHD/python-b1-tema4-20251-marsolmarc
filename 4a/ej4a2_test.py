@@ -1,4 +1,5 @@
 from ej4a2 import count_fruits
+from flake8.api import legacy as flake8
 
 
 def test_count_fruits():
@@ -23,3 +24,14 @@ def test_count_fruits():
 
     fruits = ["apple", "banana", "kiwi"]
     assert count_fruits(fruits) == {"apple": 1, "banana": 1, "kiwi": 1}, "count_fruits does not return the correct value for input ['apple', 'banana', 'kiwi']. It should be {'apple': 1, 'banana': 1, 'kiwi': 1}"
+
+
+def test_pep8_conformity():
+    style_guide = flake8.get_style_guide()
+    report = style_guide.check_files([
+        "ej4a2.py",
+    ])
+
+    assert report.get_statistics("E") == [], (
+        "Your code does not comply with flake8. Please review your code"
+    )
