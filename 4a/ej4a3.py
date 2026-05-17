@@ -41,3 +41,6 @@ def descending_list_iterator_manual(numbers_list):
 
     # crear iterador manualment
     return iter(numbers_list)
+
+
+print(list(descending_list_iterator_manual(numeros)))
