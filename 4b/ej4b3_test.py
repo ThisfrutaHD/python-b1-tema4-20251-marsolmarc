@@ -1,5 +1,5 @@
 from ej4b3 import create_list
-
+from flake8.api import legacy as flake8
 import pytest
 from random import randint
 from typing import List, Tuple
@@ -73,3 +73,15 @@ def test_create_list_with_negative_length():
     # WHEN / THEN
     with pytest.raises(ValueError):
         create_list(length_list)
+
+
+def test_pep8_conformity():
+    style_guide = flake8.get_style_guide()
+    report = style_guide.check_files([
+        "ej4b3.py",
+    ])
+
+    assert report.get_statistics("F") + report.get_statistics("E9") == [], ( #type: ignore
+        "Your code does not comply with flake8. Please review your code"
+    )
+    
