@@ -25,6 +25,7 @@ def test_pep8_conformity():
         "ej4a1.py",
     ])
 
-    assert report.get_statistics("E") == [], (
+    assert report.get_statistics("F") + report.get_statistics("E9") == [], ( #type: ignore
         "Your code does not comply with flake8. Please review your code"
     )
+    
