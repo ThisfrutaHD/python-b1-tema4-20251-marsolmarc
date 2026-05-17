@@ -28,3 +28,16 @@ def descending_list_iterator(numbers_list):
 
 numeros = [2, 3, 6, 9, 11, 12, 15, 18, 67]
 print(list(descending_list_iterator(numeros)))  
+
+def descending_list_iterator_manual(numbers_list):
+    # Ordenar manualment (bubble sort descendent)
+    for i in range(len(numbers_list)):
+        for j in range(len(numbers_list) - 1):
+            if numbers_list[j] < numbers_list[j + 1]:
+                # intercanvi
+                temp = numbers_list[j]
+                numbers_list[j] = numbers_list[j + 1]
+                numbers_list[j + 1] = temp
+
+    # crear iterador manualment
+    return iter(numbers_list)
