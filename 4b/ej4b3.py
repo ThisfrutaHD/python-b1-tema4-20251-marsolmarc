@@ -49,14 +49,14 @@ def create_list(length_list):
     A tuple containing two lists of integers, the first one created in RAM and
     the second one created in Heap by reusing the first list.
     """
-    
+
     if length_list < 0:
         raise ValueError("The number must be positive")
 
     llista_ram = []
     for _ in range(length_list):
         llista_ram.append(random.randint(0, 100))
-    
+
     llista_heap = copy.deepcopy(llista_ram)
 
     return llista_ram, llista_heap
