@@ -1,42 +1,4 @@
 """
-Enunciado:
-
-Implementa la clase "Shape", que tiene el método 'get_sides', que devuelve una
-lista con los lados de la forma.
-
-Luego, implementa la clase "Triangle", que hereda de "Shape" y tiene los métodos
-'area' y '__init__', donde el método 'area' devuelve el área del triángulo y '__init__'
-inicializa los atributos base, altura y lados de la forma.
-
-Por último, implementa la clase "Rectangle", que hereda de "Shape" y tiene los
-métodos 'area' y '__init__', donde el método 'area' devuelve el área del rectángulo
-y '__init__' inicializa los atributos largo, ancho y lados de la forma.
-
-Parámetros:
-    Para la clase Triangle:
-        - sides: una lista de tres enteros, que representa los lados del
-        triángulo.
-        - base: un número entero, que representa la base del triángulo.
-        - height: un número entero, que representa la altura del triángulo.
-    
-    Para la clase Rectangle:
-        - sides: una lista de cuatro enteros, que representa los lados del
-        rectángulo.
-        - length: un número entero, que representa el largo del rectángulo.
-        - width: un número entero, que representa el ancho del rectángulo.
-        
-Ejemplo:
-    Entrada:
-        triangle = Triangle([3, 4, 5], 4, 3)
-        triangle.area()
-        
-        rectangle = Rectangle([5, 5, 2, 2], length=5, width=2)
-        rectangle.get_area()
-    Salida:
-        6.0
-        10
-
-
 Enunciat:
 
 Implementa la classe "Shape", que té el mètode 'get_sides', que torna una
@@ -100,7 +62,6 @@ class Rectangle(Shape):
         pass
 
 
-# Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 
 # # Create a triangle with base 4 and height 3

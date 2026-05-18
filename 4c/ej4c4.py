@@ -1,32 +1,4 @@
 """
-Enunciado:
-Se pide crear una interfaz "Animal" que tenga un método abstracto "talk".
-Además, se deben crear las clases concretas "Dog", "Cat" y "Parrot" que
-implementen la interfaz "Animal".
-
-El método "talk" debe imprimir "¡Guau!" para la clase "Dog", "¡Meow!"
-para la clase "Cat" y "¡Whistle!" para la clase "Parrot"
-
-Parámetros:
-    La clase Animal:
-        - name: String que representa el nombre del animal.
-        
-Ejemplo:
-    Entrada:
-        dog = Dog("Fido")
-        dog.talk()
-
-        cat = Cat("Fido")
-        cat.talk()
-        
-        parrot = Parrot("Polly")
-        parrot.name
-    Salida:
-        "¡Guau!"
-        "¡Meow!"
-        "Polly"
-
-
 Enunciat:
 Es demana crear una interfície "Animal" que tingui un mètode abstracte "talk".
 A més, cal crear les classes concretes "Dog", "Cat" i "Parrot" que
@@ -82,7 +54,6 @@ class Parrot():
 
 
 
-# Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 
 def test_code():
