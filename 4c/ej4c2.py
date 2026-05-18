@@ -25,27 +25,25 @@ Exemple:
 from abc import ABC, abstractmethod
 
 # Write abstract class Vehicles here 
-class Vehicles():
+class Vehicles(ABC):
+    @abstractmethod
     def drive(self):
-        # Write here your code
         pass
 
 # Corret and overwrite class Car(Vehicles) here 
-class Car():
+class Car(Vehicles):
     def drive(self):
-        # Write here your code
-        pass
+        return "Driving a car"
 
 # Corret and overwrite class Bicycle(Vehicles) here 
-class Bicycle():
+class Bicycle(Vehicles):
     def drive(self):
-        # Write here your code
-        pass
+        return "Riding a bicycle"
 
 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# car = Car()
-# print(car.drive())
+car = Car()
+print(car.drive())
 
-# bicycle = Bicycle()
-# print(bicycle.drive())
+bicycle = Bicycle()
+print(bicycle.drive())
