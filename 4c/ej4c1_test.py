@@ -1,5 +1,5 @@
 from ej4c1 import Person, Student
-
+from flake8.api import legacy as flake8
 
 # Tests para las clases Person y Student
 def test_describe_person():
@@ -16,3 +16,15 @@ def test_describe_student():
     assert s.describe() == "Mary is 22 years old. Studies Computer Science.", "describe does not return the correct value for input Student('Mary', 22, 'Computer Science'). It should be 'Mary is 22 years old. Studies Computer Science.'"
     assert s.major == "Computer Science", "major does not return the correct value for input Student('Mary', 22, 'Computer Science'). It should be 'Computer Science'"
     assert isinstance(s, Person), "Student is not a subclass of Person"
+
+
+def test_pep8_conformity():
+    style_guide = flake8.get_style_guide()
+    report = style_guide.check_files([
+        "ej4c1.py",
+    ])
+
+    assert report.get_statistics("F") + report.get_statistics("E9") == [], ( #type: ignore
+        "Your code does not comply with flake8. Please review your code"
+    )
+    
