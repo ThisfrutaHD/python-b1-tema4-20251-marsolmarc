@@ -26,32 +26,32 @@ Exemple:
          "Meow!"
          "Polly"        
 """
+from abc import abstractmethod, ABC
+
 # Write abstract class Animal here
+class Animal(ABC):
+    def __init__(self, name):
+        self.name = name
+
+    @abstractmethod
+    def talk(self):
+        pass
+
 
 # Corret and overwrite class Dog(Animal) here 
-class Dog():
-    def __init__(self, name):
-        self.name = name
-
+class Dog(Animal):
     def talk(self):
-        pass
+        return "¡Guau!"
 
 # Corret and overwrite class Cat(Animal) here 
-class Cat():
-    def __init__(self, name):
-        self.name = name
+class Cat(Animal):
     def talk(self):
-        pass
+        return "¡Meow!"
 
 # Corret and overwrite class Parrot(Animal) here 
-class Parrot():
-    def __init__(self, name):
-        self.name = name
+class Parrot(Animal):
     def talk(self):
-        pass
-
-
-
+        return "¡Whistle!"
 
 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
@@ -61,4 +61,4 @@ def test_code():
 	for animal in animals:
 	    print(f"{animal.name} dice {animal.talk()}")
 
-#test_code()
+test_code()
